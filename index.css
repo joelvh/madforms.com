@@ -1,0 +1,97 @@
+/* 
+ * page styles 
+ */
+body, input, select {
+	font-family: Georgia, serif;
+	vertical-align:baseline;
+}
+body {
+	margin:30px auto;
+}
+#wrapper {
+	width:100%;
+	max-width:760px;
+	margin:auto;
+}
+p {
+	line-height: 25px;
+}
+p.intro {
+    font-style: italic;
+    text-align: center;
+    color: #94B24D;
+    font-size: 16px;
+}
+h1 {
+    font-weight:lighter;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5), 2px 2px 2px rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 38px;
+    color: #363D52;
+}
+/* 
+ * mad forms styles 
+ */
+.madforms.editor,
+.madforms.form {
+    line-height: 2.2em;
+    text-align: justify;
+    margin: 20px auto;
+	color: #666;
+}
+.madforms.editor *,
+.madforms.form * {
+    font-size: 1em;
+}
+.madforms input[type=text],
+.madforms input[type=password],
+.madforms input[type=email],
+.madforms input[type=tel],
+.madforms select {
+    border:none;
+    background:none;
+	background-color:#eee;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+    border-bottom: 1px dotted #ddd;
+    vertical-align: baseline;
+    outline: none;
+	margin:auto 1px;
+	padding:0 2px;
+	color:#636163;
+	cursor:text;
+}
+.madforms input.placeholder,
+.madforms input::-webkit-input-placeholder,
+.madforms input:-moz-placeholder {
+	color:#AEBA9B;
+}
+.madforms input[type=text]:focus,
+.madforms input[type=password]:focus,
+.madforms input[type=email]:focus,
+.madforms input[type=tel]:focus,
+.madforms select:focus {
+	border-bottom-style: solid;
+	background-color:#D8F8BF;
+}
+.madforms select {
+	cursor:pointer;
+}
+.madforms.form input,
+.madforms.form select {
+	font-size: 1em;
+}
+.madforms.editor {
+	border:3px dashed #D8F8BF;
+	padding:5px 10px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.madforms.editor:hover {
+	border:3px dashed #D1F09D;
+}
+.madforms.editor.active {
+	border:3px solid #D1F09D;
+}

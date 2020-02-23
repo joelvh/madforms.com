@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <title>Mad Forms</title>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <link href="editor.css" type="text/css" rel="stylesheet" />
+    <script>
+      if (!window.console) {
+        window.console = {
+          log: function() {}
+        }
+      }
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="editor.js"></script>
+    <script>
+      $(function() {
+        //bind events
+        $('.try').bind('click', function(e) {
+          var editorId = $(e.target).attr('madforms-editor')
+          if (!editorId) {
+            alert('Not sure which editor to try!')
+            return
+          }
+          var settings = madforms.getSettings(editorId)
+          console.log(JSON.stringify(settings))
+          alert(
+            "This is still just a demo.  Here's the data that would be saved:\n\n" +
+              JSON.stringify(settings)
+          )
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Mad Forms Editor Demo</h1>
+      <p class="intro">
+        Write your narrative with place holder words or phrases where you want
+        the user to enter information. Highlight the place holder text and click
+        the
+        <span class="madctrl madforms-indicator"
+          ><img
+            src="icons/add.png"
+            border="0"
+            height="16"
+            width="16"
+            alt="Add"
+        /></span>
+        button that appears to select what kind of information should be filled
+        out.
+      </p>
+      <div id="madforms-editor1" class="madforms editor">
+        Hi there! This is a demo of a signup form. Feel free to edit:<br />My
+        name is
+        <input
+          style="width: 80px;"
+          title="first name"
+          placeholder="first name"
+          type="text"
+        />
+        <input
+          style="width: 76px;"
+          title="last name"
+          placeholder="last name"
+          type="text"
+        />, and I stumbled on this website through
+        <select title="some source" contenteditable="false"
+          ><option value="a rabbit hole">a rabbit hole</option>
+          <option value="a search engine">a search engine</option
+          ><option value="a friend">a friend</option>
+          <option value="another website">another website</option
+          ><option value="an article">an article</option></select
+        >. I like it around here, so let me know about the latest happenings at
+        <input
+          class="email"
+          style="width: 105px;"
+          title="email address"
+          placeholder="email address"
+          type="text"
+        />. Just in case I want to login, I'll plan on using the password
+        <input
+          style="width: 50px;"
+          title="secret"
+          placeholder="secret"
+          type="password"
+        />.<br />
+      </div>
+      <button madforms-editor="madforms-editor1" class="try">Save</button>
+      <p>
+        Right now, this is just a demo of the editor. Working on saving your
+        form very soon.
+      </p>
+      <hr />
+      <p>
+        Tested in
+        <img
+          src="img/browser-chrome-small.png"
+          border="0"
+          style="margin-bottom:-5px;"
+        />
+        <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>
+        11 and
+        <img
+          src="img/browser-firefox-small.png"
+          border="0"
+          style="margin-bottom:-5px;"
+        />
+        <a href="http://www.mozilla.com/" target="_blank">Firefox</a> 3.6 and
+        4.0.
+      </p>
+      <p>
+        <a href="http://getsatisfaction.com/madforms" target="_blank"
+          >Click here</a
+        >
+        with feedback or bugs, or if you're interested in helping out,
+        <a href="mailto:joel@madforms.com">shoot me an email</a>. Thanks!
+      </p>
+    </div>
+
+    <p style="text-align:center;">&copy; Copyright 2011 MadForms.com</p>
+    <p style="text-align:center;">
+      <a href="http://mixpanel.com/?from=partner"
+        ><img
+          src="http://mixpanel.com/site_media/images/mixpanel_partner_logo.gif"
+          alt="Mobile Analytics by Mixpanel"
+      /></a>
+    </p>
+    <!-- START // MixPanel -->
+    <script>
+      var mp_protocol =
+        'https:' == document.location.protocol ? 'https://' : 'http://'
+      document.write(
+        unescape(
+          '%3Cscript src="' +
+            mp_protocol +
+            'api.mixpanel.com/site_media/js/api/mixpanel.js"%3E%3C/script%3E'
+        )
+      );
+    </script>
+    <script>
+      try {
+        var mpmetrics = new MixpanelLib('6afc64e1cf4af6bb43a1c41c228bcfd0')
+      } catch (err) {
+        null_fn = function() {}
+        var mpmetrics = {
+          track: null_fn,
+          track_funnel: null_fn,
+          register: null_fn,
+          register_once: null_fn,
+          register_funnel: null_fn
+        }
+      }
+    </script>
+    <!-- END // MixPanel -->
+
+    <!-- START // KISSInsights.com -->
+    <script>
+      var _kiq = _kiq || []
+    </script>
+    <script src="//s3.amazonaws.com/ki.js/18213/3wC.js" async="true"></script>
+    <!-- END // KISSInsights.com -->
+    <!-- START // Google Analytics -->
+    <script>
+      var _gaq = _gaq || []
+      _gaq.push(['_setAccount', 'UA-8299293-14'])
+      _gaq.push(['_setDomainName', '.madforms.com'])
+      _gaq.push(['_trackPageview'])
+      ;(function() {
+        var ga = document.createElement('script')
+        ga.type = 'text/javascript'
+        ga.async = true
+        ga.src =
+          ('https:' == document.location.protocol
+            ? 'https://ssl'
+            : 'http://www') + '.google-analytics.com/ga.js'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(ga, s)
+      })()
+    </script>
+    <!-- END // Google Analytics -->
+  </body>
+</html>
