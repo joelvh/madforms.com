@@ -59,35 +59,6 @@
 		
 		<p style="text-align:center;">&copy; Copyright 2011 MadForms.com</p>
 		<p style="text-align:center;"><a href="http://mixpanel.com/?from=partner"><img src="http://mixpanel.com/site_media/images/mixpanel_partner_logo.gif" alt="Mobile Analytics by Mixpanel" /></a></p>
-		<!-- START // MixPanel -->
-		<script type='text/javascript'>
-		var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://');
-		document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E'));
-		</script>
-		<script type='text/javascript'>
-		try {  var mpmetrics = new MixpanelLib('6afc64e1cf4af6bb43a1c41c228bcfd0'); } catch(err) { null_fn = function () {};
-		var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; }
-		</script>
-		<!-- END // MixPanel -->
-		<!-- START // GetSatisfaction.com -->
-		<script type="text/javascript" charset="utf-8">
-		var is_ssl = ("https:" == document.location.protocol);
-		var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
-		document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		
-		<script type="text/javascript" charset="utf-8">
-		var feedback_widget_options = {
-			display: "overlay",
-			company: "madforms",
-			placement: "left",
-			color: "#94B24D",
-			style: "idea"
-		};
-		var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
-		</script>
-		<!-- END // GetSatisfaction.com -->
-		
 		<!-- START // KISSInsights.com -->
 		<script type="text/javascript">var _kiq = _kiq || [];</script>
 		<script type="text/javascript" src="//s3.amazonaws.com/ki.js/18213/3wC.js" async="true"></script>
